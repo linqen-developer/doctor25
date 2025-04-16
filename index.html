@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>닥터25 - 응급의학과 의사들이 만든 프리미엄 응급키트</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(122, 193, 66, 0.8) 0%, rgba(88, 166, 24, 0.9) 100%);
+        }
+        .text-brand {
+            color: #7AC142;
+        }
+        .bg-brand {
+            background-color: #7AC142;
+        }
+        .border-brand {
+            border-color: #7AC142;
+        }
+        .btn-brand {
+            background-color: #7AC142;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-brand:hover {
+            background-color: #689f36;
+            transform: translateY(-2px);
+        }
+        .btn-outline-brand {
+            border: 2px solid #7AC142;
+            color: #7AC142;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-brand:hover {
+            background-color: #7AC142;
+            color: white;
+        }
+        .shadow-brand {
+            box-shadow: 0 4px 20px rgba(122, 193, 66, 0.25);
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(122, 193, 66, 0.3);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="flex items-center">
+                        <div class="bg-brand rounded-md p-2 mr-2">
+                            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 6H16M12 6V18M18 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold text-gray-800">닥터<span class="text-brand">25</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-10 text-sm font-medium">
+                    <a href="#about" class="text-gray-700 hover:text-brand transition">회사소개</a>
+                    <a href="#products" class="text-gray-700 hover:text-brand transition">제품</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-brand transition">특징</a>
+                    <a href="#process" class="text-gray-700 hover:text-brand transition">이용방법</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-brand transition">고객후기</a>
+                    <a href="#faq" class="text-gray-700 hover:text-brand transition">FAQ</a>
+                    <a href="#team" class="text-gray-700 hover:text-brand transition">팀소개</a>
+                    <a href="#contact" class="text-gray-700 hover:text-brand transition">문의하기</a>
+                </div>
+                <div>
+                    <button class="btn-brand px-6 py-2 rounded-full text-sm font-medium shadow-lg">
+                        지금 구매하기
+                    </button>
+                    <button class="md:hidden text-gray-500 hover:text-gray-800 ml-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 hero-gradient">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        응급의학과 의사들이 설계한<br>
+                        <span class="text-yellow-300">최고의 응급키트</span>
+                    </h1>
+                    <p class="text-white text-xl mb-8 opacity-90 max-w-lg">
+                        평범한 일상에서 갑작스러운 응급상황. 
+                        닥터25는 의학적 전문지식을 바탕으로 가장 효과적이고 실용적인 응급키트를 제공합니다.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="btn-outline-brand bg-white px-8 py-3 rounded-full text-lg font-medium shadow-lg">
+                            키트 둘러보기
+                        </button>
+                        <button class="px-8 py-3 rounded-full text-lg font-medium bg-gray-900 text-white shadow-lg hover:bg-black transition">
+                            <i class="fas fa-play-circle mr-2"></i> 시연 영상 보기
+                        </button>
+                    </div>
+                    <div class="mt-10 bg-white bg-opacity-20 p-4 rounded-lg inline-block">
+                        <div class="flex items-center space-x-2">
+                            <div class="flex -space-x-2">
+                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/32.jpg" alt="User">
+                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/men/54.jpg" alt="User">
+                                <img class="w-10 h-10 rounded-full border-2 border-white" src="https://randomuser.me/api/portraits/women/58.jpg" alt="User">
+                            </div>
+                            <div class="text-white">
+                                <p class="font-medium">2,500+ 고객이 선택한 응급키트</p>
+                                <div class="flex items-center">
+                                    <div class="flex">
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <i class="fas fa-star-half-alt text-yellow-400"></i>
+                                    </div>
+                                    <span class="ml-1 text-sm">(4.8/5 평점)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="bg-white p-6 rounded-2xl shadow-xl max-w-md mx-auto animate-float">
+                        <div class="aspect-w-1 aspect-h-1 bg-gray-100 rounded-lg overflow-hidden mb-4">
+                            <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="응급키트" class="object-cover w-full h-full">
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">닥터25 프리미엄 응급키트</h3>
+                        <div class="flex items-center mb-4">
+                            <span class="text-brand font-bold text-2xl mr-2">₩89,000</span>
+                            <span class="text-gray-500 line-through text-sm">₩120,000</span>
+                            <span class="ml-2 bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full font-medium">26% 할인</span>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600 text-sm">(128 리뷰)</span>
+                        </div>
+                        <div class="flex items-center mb-4 text-sm text-gray-600">
+                            <div class="mr-4 flex items-center">
+                                <i class="fas fa-box-open mr-1 text-brand"></i>
+                                <span>25가지 품목</span>
+                            </div>
+                            <div class="mr-4 flex items-center">
+                                <i class="fas fa-truck mr-1 text-brand"></i>
+                                <span>무료배송</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-medal mr-1 text-brand"></i>
+                                <span>의사 설계</span>
+                            </div>
+                        </div>
+                        <button class="btn-brand w-full py-3 rounded-lg font-medium">
+                            장바구니에 담기
+                        </button>
+                    </div>
+                    <div class="absolute -bottom-10 -right-10 bg-yellow-400 text-gray-900 rounded-full p-4 shadow-lg hidden md:block">
+                        <div class="text-center">
+                            <p class="font-bold text-lg">지금 주문 시</p>
+                            <p class="text-sm">24시간 내 발송</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <p class="text-gray-500 font-medium">신뢰할 수 있는 제품</p>
+            </div>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="text-center">
+                    <i class="fas fa-stethoscope text-3xl text-brand mb-2"></i>
+                    <p class="text-sm font-medium text-gray-600">응급의학과 의사 설계</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-certificate text-3xl text-brand mb-2"></i>
+                    <p class="text-sm font-medium text-gray-600">식약처 인증</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-shipping-fast text-3xl text-brand mb-2"></i>
+                    <p class="text-sm font-medium text-gray-600">빠른 배송</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-thumbs-up text-3xl text-brand mb-2"></i>
+                    <p class="text-sm font-medium text-gray-600">100% 고객 만족</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-shield-alt text-3xl text-brand mb-2"></i>
+                    <p class="text-sm font-medium text-gray-600">품질 보증</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                    <div class="relative">
+                        <div class="bg-white rounded-xl shadow-xl p-8 relative z-10">
+                            <div class="flex items-center mb-6">
+                                <div class="bg-brand rounded-md p-2 mr-3">
+                                    <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 6H16M12 6V18M18 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold">닥터25의 미션</h3>
+                            </div>
+                            <p class="text-gray-600 mb-6">
+                                "모든 가정에 안전을 제공한다"는 사명을 가지고 출발한 닥터25는 현직 응급의학과 전문의들이 모여 설립한 회사입니다. 우리는 일상에서 발생할 수 있는 응급상황에 대한 최적의 대처법과 필수 의료용품을 연구하여 가장 효과적인 응급키트를 제공합니다.
+                            </p>
+                            <div class="flex items-center">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="CEO" class="w-12 h-12 rounded-full mr-4">
+                                <div>
+                                    <p class="font-medium text-gray-800">김민수 대표</p>
+                                    <p class="text-sm text-gray-500">응급의학과 전문의, 서울대학교병원</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute top-10 left-10 -z-10 w-full h-full bg-brand rounded-xl"></div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 lg:pl-16">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-8">응급의학과 의사들이 직접 설계한<br><span class="text-brand">전문적인 응급키트</span></h2>
+                    <div class="space-y-6">
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-brand bg-opacity-20 rounded-full p-2">
+                                    <i class="fas fa-check text-brand"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-medium text-gray-800 mb-2">의학적 전문성</h3>
+                                <p class="text-gray-600">현직 응급의학과 전문의들의 풍부한 임상 경험을 바탕으로 실제 응급상황에서 필요한 필수 품목들만 엄선했습니다.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-brand bg-opacity-20 rounded-full p-2">
+                                    <i class="fas fa-heart text-brand"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-medium text-gray-800 mb-2">환자 중심 설계</h3>
+                                <p class="text-gray-600">응급상황에서 일반인도 쉽게 사용할 수 있도록 직관적인 구성과 명확한 사용법을 제공합니다.</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="bg-brand bg-opacity-20 rounded-full p-2">
+                                    <i class="fas fa-gem text-brand"></i>
+                                </div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-medium text-gray-800 mb-2">최고 품질 보장</h3>
+                                <p class="text-gray-600">모든 의료용품은 식약처 인증을 받은 제품만을 사용하며 철저한 품질 관리를 통해 안전성을 보장합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <a href="#products" class="btn-brand px-8 py-3 rounded-full text-lg font-medium inline-block shadow-lg">
+                            제품 살펴보기
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">닥터25의 <span class="text-brand">프리미엄 응급키트</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    의학적 전문지식을 바탕으로 실용성과 효율성을 고려한 다양한 응급키트를 만나보세요. 
+                    각 상황과 환경에 최적화된 맞춤형 응급키트를 제공합니다.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 product-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1603398938378-e54eab446dde?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="스탠다드 키트" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-brand text-white px-3 py-1 text-sm font-medium rounded-full">
+                            베스트셀러
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">닥터25 스탠다드 키트</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">(214 리뷰)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            25가지 필수 응급용품을 포함한 가정용 응급키트. 작은 상처부터 중대한 상황까지 대비할 수 있는 기본 키트입니다.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-brand font-bold text-xl">₩89,000</span>
+                                <span class="text-gray-500 line-through text-sm ml-2">₩120,000</span>
+                            </div>
+                            <button class="btn-brand px-4 py-2 rounded-lg text-sm font-medium">
+                                구매하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 product-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1583947581924-860bda6a26df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="트래블 키트" class="w-full h-56 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">닥터25 트래블 키트</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">(156 리뷰)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            여행 시 발생할 수 있는 응급상황에 대비한 콤팩트한 키트. 가벼운 무게와 휴대성을 강화한 여행자 필수품입니다.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-brand font-bold text-xl">₩59,000</span>
+                                <span class="text-gray-500 line-through text-sm ml-2">₩75,000</span>
+                            </div>
+                            <button class="btn-brand px-4 py-2 rounded-lg text-sm font-medium">
+                                구매하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 product-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="아웃도어 키트" class="w-full h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 text-sm font-medium rounded-full">
+                            신제품
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">닥터25 아웃도어 키트</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-sm text-gray-500">(87 리뷰)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            등산, 캠핑, 낚시 등 야외활동에 최적화된 응급키트. 방수 기능과 자연환경에서 발생할 수 있는 특수상황에 대비합니다.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <span class="text-brand font-bold text-xl">₩109,000</span>
+                                <span class="text-gray-500 line-through text-sm ml-2">₩140,000</span>
+                            </div>
+                            <button class="btn-brand px-4 py-2 rounded-lg text-sm font-medium">
+                                구매하기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="btn-outline-brand px-8 py-3 rounded-full text-lg font-medium">
+                    모든 제품 보기
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">왜 <span class="text-brand">닥터25</span>인가?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    응급의학과 전문의들이 설계한 닥터25 응급키트는 단순한 구급함이 아닌 전문적인 응급처치 솔루션입니다.
+                    의학적 전문성과 사용자 편의성을 모두 고려한 프리미엄 응급키트를 경험해보세요.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-brand bg-opacity-10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-user-md text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">전문의 설계</h3>
+                    <p class="text-gray-600">
+                        현직 응급의학과 전문의들이 직접 구성하고 설계한 응급키트로, 실제 응급실에서의 경험을 바탕으로 한 의학적 전문성을 담았습니다.
+                    </p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-brand bg-opacity-10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">최고급 품질</h3>
+                    <p class="text-gray-600">
+                        모든 구성품은 식약처 인증을 받은 의료용 제품만을 사용하며, 엄격한 품질 관리 과정을 거쳐 최고의 품질을 보장합니다.
+                    </p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-brand bg-opacity-10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-book-medical text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">상황별 매뉴얼</h3>
+                    <p class="text-gray-600">
+                        각 키트에는 응급상황별 대처법이 담긴 상세 매뉴얼이 포함되어 있어, 전문 지식이 없는 일반인도 신속하게 응급처치가 가능합니다.
+                    </p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-brand bg-opacity-10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">앱 연동 서비스</h3>
+                    <p class="text-gray-600">
+                        닥터25 전용 앱을 통해 응급처치 동영상 가이드, 유효기간 알림, 보충품 주문 등 편리한 서비스를 이용할 수 있습니다.
+                    </p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-brand bg-opacity-10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-sync-alt text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">정기 보충 서비스</h3>
+                    <p class="text-gray-600">
+                        구독 서비스를 통해 유효기간이 지난 구성품을 정기적으로 교체받을 수 있어, 항상 최상의 상태로 응급키트를 유지할 수 있습니다.
+                    </p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="bg-brand bg-opacity-10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-graduation-cap text-2xl text-brand"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">응급처치 교육</h3>
+                    <p class="text-gray-600">
+                        키트 구매 시 온라인 응급처치 교육 콘텐츠를 무료로 제공하여, 실제 상황에서 더욱 효과적으로 대응할 수 있도록 도와드립니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 mb-12 lg:mb-0">
+                    <h2 class="text-3xl font-bold mb-6">닥터25 응급키트<br><span class="text-brand">사용 프로세스</span></h2>
+                    <p class="text-gray-600 mb-8">
+                        닥터25 응급키트는 응급상황 시 누구나 쉽고 빠르게 사용할 수 있도록 설계되었습니다. 
+                        아래의 단계별 가이드를 통해 효과적인 응급처치가 가능합니다.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white font-bold">
+                                    1
+                                </div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold mb-2">상황 파악</h3>
+                                <p class="text-gray-600">
+                                    응급키트 상단의 상황별 가이드를 확인하여 현재 상황에 맞는 섹션을 찾습니다. 색상 코딩 시스템으로 빠르게 식별이 가능합니다.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white font-bold">
+                                    2
+                                </div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold mb-2">매뉴얼 확인</h3>
+                                <p class="text-gray-600">
+                                    해당 섹션의 응급처치 매뉴얼을 펼쳐 단계별 지침을 확인합니다. QR코드를 스캔하면 동영상 가이드도 볼 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white font-bold">
+                                    3
+                                </div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold mb-2">도구 준비</h3>
+                                <p class="text-gray-600">
+                                    매뉴얼에 표시된 필요 도구들을 키트에서 꺼내 사용 준비를 합니다. 각 도구는 용도별로 분류되어 있어 쉽게 찾을 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white font-bold">
+                                    4
+                                </div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold mb-2">응급처치 실행</h3>
+                                <p class="text-gray-600">
+                                    매뉴얼의 지시에 따라 응급처치를 진행합니다. 필요시 앱을 통해 실시간 가이드를 받을 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <div class="w-10 h-10 rounded-full bg-brand flex items-center justify-center text-white font-bold">
+                                    5
+                                </div>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-xl font-bold mb-2">의료기관 연계</h3>
+                                <p class="text-gray-600">
+                                    필요한 경우, 키트에 포함된 비상연락망을 통해 가까운 의료기관에 연락하거나 앱을 통해 의료진과 연결됩니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="응급키트 사용법" class="rounded-xl shadow-xl mx-auto">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <button class="bg-white rounded-full p-4 shadow-lg hover:bg-gray-100 transition">
+                                <svg class="w-12 h-12 text-brand" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 bg-brand text-white p-4 rounded-lg shadow-lg">
+                            <p class="font-bold">QR코드로<br>동영상 가이드</p>
+                        </div>
+                    </div>
+                    <div class="mt-16 bg-gray-100 p-6 rounded-xl">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
+                            알고 계셨나요?
+                        </h3>
+                        <p class="text-gray-700">
+                            응급상황 발생 시 골든타임은 단 5분! 닥터25 응급키트는 이 골든타임 내에 효과적인 응급처치가 가능하도록 직관적인 구성과 명확한 사용법을 제공합니다. 전문가의 설계로 비전문가도 신속하게 대응할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-16">
+                <a href="#" class="btn-brand px-8 py-3 rounded-full text-lg font-medium inline-block shadow-lg">
+                    상세 사용 가이드 보기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4"><span class="text-brand">고객들의</span> 생생한 후기</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    닥터25 응급키트를 사용한 고객들의 실제 경험담을 들어보세요. 
+                    응급상황에서 닥터25가 어떻게 도움이 되었는지 확인해보세요.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="고객" class="w-14 h-14 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">이지영</h4>
+                            <p class="text-gray-500 text-sm">서울시 거주, 두 아이의 엄마</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "아이가 갑자기 높은 열이 나서 당황했는데, 닥터25 키트의 응급 매뉴얼을 보고 해열제를 적절히 사용할 수 있었어요. 
+                        특히 앱으로 체온 기록도 할 수 있어서 병원 방문 시 의사선생님께 정확한 정보를 전달할 수 있었습니다."
+                    </p>
+                    <p class="text-brand font-medium">스탠다드 키트 사용자</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="고객" class="w-14 h-14 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">김현우</h4>
+                            <p class="text-gray-500 text-sm">등산 동호회 회장</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "등산 중 동료가 발목을 삐었는데, 닥터25 아웃도어 키트의 압박붕대와 냉각팩이 정말 유용했습니다. 
+                        방수 케이스 덕분에 비가 와도 내용물이 전혀 젖지 않았고, 응급처치 매뉴얼이 정말 명확해서 쉽게 처치할 수 있었어요."
+                    </p>
+                    <p class="text-brand font-medium">아웃도어 키트 사용자</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg testimonial-card">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="고객" class="w-14 h-14 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">박소연</h4>
+                            <p class="text-gray-500 text-sm">해외여행 전문 블로거</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-600 mb-4">
+                        "배낭여행 필수품으로 닥터25 트래블 키트를 항상 챙깁니다. 지난 태국 여행에서 음식 알레르기 반응이 나타났을 때 
+                        키트에 있던 항히스타민제를 바로 복용할 수 있어서 큰 문제 없이 여행을 계속할 수 있었어요."
+                    </p>
+                    <p class="text-brand font-medium">트래블 키트 사용자</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="text-brand font-medium hover:underline inline-flex items-center">
+                    더 많은 후기 보기
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">자주 묻는 <span class="text-brand">질문</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    닥터25 응급키트에 대한 궁금증을 해결해드립니다. 
+                    더 많은 질문은 고객센터로 문의해주세요.
+                </p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-bold text-gray-800">응급키트의 유효기간은 얼마인가요?</h3>
+                        <i class="fas fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div class="mt-3">
+                        <p class="text-gray-600">
+                            닥터25 응급키트 내 의약품 및 의료용품은 품목별로 유효기간이 다릅니다. 대부분의 품목은 제조일로부터 3년의 유효기간을 가지며, 
+                            키트 내부에 유효기간 관리표가 포함되어 있습니다. 또한 닥터25 앱을 통해 유효기간 알림 서비스를 제공하고 있어 
+                            만료 전 교체가 필요한 품목을 미리 알려드립니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-bold text-gray-800">키트 구성품을 개별로 구매할 수 있나요?</h3>
+                        <i class="fas fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div class="mt-3">
+                        <p class="text-gray-600">
+                            네, 가능합니다. 닥터25 공식 홈페이지와 앱에서 키트 구성품을 개별적으로 구매하실 수 있습니다. 
+                            유효기간이 지난
+                            특정 품목만 교체하거나 소진된 품목을 보충하실 때 편리하게 이용하실 수 있습니다. 
+                            또한 '정기 보충 서비스'에 가입하시면 정기적으로 필요한 구성품을 자동으로 받아보실 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-bold text-gray-800">응급키트 사용법을 잘 모르면 어떻게 하나요?</h3>
+                        <i class="fas fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div class="mt-3">
+                        <p class="text-gray-600">
+                            닥터25 모든 키트에는 상세한 응급처치 매뉴얼이 포함되어 있어, 응급상황 시 단계별로 따라하실 수 있습니다. 
+                            또한 닥터25 앱을 통해 동영상 가이드를 제공하고 있으며, 키트 내부의 QR코드를 스캔하면 바로 관련 동영상을 
+                            확인하실 수 있습니다. 추가로 키트 구매 고객에게는 온라인 응급처치 교육 콘텐츠를 무료로 제공하고 있습니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-6 border-b border-gray-200 pb-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-bold text-gray-800">해외 배송이 가능한가요?</h3>
+                        <i class="fas fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div class="mt-3">
+                        <p class="text-gray-600">
+                            네, 해외 배송이 가능합니다. 다만, 국가별로 의약품 수입 규제가 다를 수 있어 일부 품목이 제한될 수 있습니다. 
+                            해외 배송을 원하시는 경우 고객센터로 문의주시면 해당 국가의 규제에 맞는 키트 구성으로 안내해드립니다. 
+                            해외 배송은 추가 배송비가 발생할 수 있습니다.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-6">
+                    <button class="flex justify-between items-center w-full text-left">
+                        <h3 class="text-lg font-bold text-gray-800">의사 상담 서비스는 어떻게 이용하나요?</h3>
+                        <i class="fas fa-chevron-down text-gray-400"></i>
+                    </button>
+                    <div class="mt-3">
+                        <p class="text-gray-600">
+                            닥터25 프리미엄 서비스 가입 고객에 한해 응급의학과 전문의 온라인 상담 서비스를 제공하고 있습니다. 
+                            닥터25 앱을 통해 24시간 의사 상담이 가능하며, 응급상황 발생 시 신속한 의료 조언을 받으실 수 있습니다. 
+                            또한 월 1회 정기 건강 상담도 포함되어 있어 평소 건강 관리에도 도움을 드립니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">더 궁금한 점이 있으신가요?</p>
+                <a href="#contact" class="btn-brand px-8 py-3 rounded-full text-lg font-medium inline-block shadow-lg">
+                    문의하기
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">닥터25를 만든 <span class="text-brand">전문의들</span></h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    닥터25는 현직 응급의학과 전문의들이 모여 설립한 회사입니다. 
+                    풍부한 임상 경험을 바탕으로 실제 응급상황에 최적화된 응급키트를 개발하고 있습니다.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="김민수 대표" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">김민수 대표</h3>
+                        <p class="text-brand mb-3">응급의학과 전문의</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            서울대학교병원 응급의학과 교수로 15년간 재직 중이며, 대한응급의학회 이사를 역임하고 있습니다. 
+                            다수의 논문과 저서를 통해 응급의학 발전에 기여하고 있습니다.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-brand">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-brand">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="박지연 이사" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">박지연 이사</h3>
+                        <p class="text-brand mb-3">응급의학과 전문의</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            아산병원 응급의료센터 과장으로 재직 중이며, 대한응급의학회 교육이사를 맡고 있습니다. 
+                            응급처치 교육 프로그램 개발과 응급키트 품질 관리를 담당합니다.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-brand">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-brand">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="이준호 이사" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">이준호 이사</h3>
+                        <p class="text-brand mb-3">응급의학과 전문의</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            세브란스병원 응급의학과 교수로 재직 중이며, 재난의학 분야의 전문가입니다. 
+                            대규모 재난 상황에 대비한 전문 응급키트 개발을 주도하고 있습니다.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-brand">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-brand">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="최서영 이사" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">최서영 이사</h3>
+                        <p class="text-brand mb-3">응급의학과 전문의</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                            분당서울대병원 응급의학과 교수로 재직 중이며, 소아응급의학 분야의 전문가입니다. 
+                            어린이와 노약자를 위한 특화된 응급키트 개발에 중점을 두고 있습니다.
+                        </p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-brand">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-brand">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-gray-600 mb-4">
+                    닥터25는 응급의학과 전문의 외에도 간호사, 약사, 제품 디자이너 등<br>
+                    다양한 분야의 전문가들이 함께 협력하여 만들어가고 있습니다.
+                </p>
+                <a href="#" class="text-brand font-medium hover:underline inline-flex items-center">
+                    팀 전체 보기
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA/Contact Section -->
+    <section id="contact" class="py-20 bg-brand text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">언제든지 <span class="text-yellow-300">닥터25</span>와 함께하세요</h2>
+                    <p class="text-white text-opacity-90 max-w-2xl mx-auto">
+                        응급상황은 예고 없이 찾아옵니다. 닥터25와 함께라면 당신과 가족의 안전을 지킬 수 있습니다.
+                        지금 바로 문의하고 당신에게 맞는 응급키트를 만나보세요.
+                    </p>
+                </div>
+                <div class="bg-white text-gray-800 rounded-xl shadow-xl p-8 md:p-12">
+                    <div class="flex flex-wrap -mx-4">
+                        <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
+                            <h3 class="text-2xl font-bold mb-6">문의하기</h3>
+                            <form>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">이름</label>
+                                    <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-brand" placeholder="이름을 입력하세요">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">이메일</label>
+                                    <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-brand" placeholder="이메일을 입력하세요">
+                                </div>
+                                <div class="mb-4">
+                                    <label class="block text-gray-700 text-sm font-medium mb-2">문의 내용</label>
+                                    <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg resize-none focus:outline-none focus:border-brand" placeholder="문의 내용을 입력하세요"></textarea>
+                                </div>
+                                <button type="submit" class="btn-brand w-full py-3 rounded-lg font-medium">
+                                    문의하기
+                                </button>
+                            </form>
+                        </div>
+                        <div class="w-full lg:w-1/2 px-4">
+                            <h3 class="text-2xl font-bold mb-6">연락처</h3>
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-brand bg-opacity-10 rounded-full p-2 mr-3">
+                                        <i class="fas fa-map-marker-alt text-brand"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">주소</h4>
+                                        <p class="text-gray-600">서울특별시 강남구 테헤란로 123, 닥터25 빌딩 7층</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-brand bg-opacity-10 rounded-full p-2 mr-3">
+                                        <i class="fas fa-phone-alt text-brand"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">전화</h4>
+                                        <p class="text-gray-600">02-1234-5678</p>
+                                        <p class="text-gray-500 text-sm">평일 09:00-18:00</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 bg-brand bg-opacity-10 rounded-full p-2 mr-3">
+                                        <i class="fas fa-envelope text-brand"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-medium">이메일</h4>
+                                        <p class="text-gray-600">info@doctor25.kr</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="border-t pt-6">
+                                <h4 class="font-medium mb-4">SNS에서도 만나보세요</h4>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="bg-brand bg-opacity-10 p-3 rounded-full text-brand hover:bg-opacity-20 transition">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="bg-brand bg-opacity-10 p-3 rounded-full text-brand hover:bg-opacity-20 transition">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="bg-brand bg-opacity-10 p-3 rounded-full text-brand hover:bg-opacity-20 transition">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a href="#" class="bg-brand bg-opacity-10 p-3 rounded-full text-brand hover:bg-opacity-20 transition">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <p class="text-white text-opacity-90 mb-6">
+                        지금 구독하고 응급처치 가이드와 건강정보를 받아보세요
+                    </p>
+                    <div class="max-w-lg mx-auto flex">
+                        <input type="email" class="flex-1 px-4 py-3 rounded-l-lg focus:outline-none" placeholder="이메일 주소를 입력하세요">
+                        <button class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-medium px-6 py-3 rounded-r-lg transition">
+                            구독하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4 mb-12">
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 lg:mb-0">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-brand rounded-md p-2 mr-2">
+                            <svg class="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 6H16M12 6V18M18 12H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <span class="text-2xl font-bold">닥터<span class="text-brand">25</span></span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        응급의학과 전문의들이 만든 프리미엄 응급키트로 소중한 가족의 안전을 지켜드립니다.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 lg:mb-0">
+                    <h4 class="text-lg font-bold mb-6">제품</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">스탠다드 키트</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">트래블 키트</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">아웃도어 키트</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">차량용 키트</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">공공기관용 키트</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">개별 구성품</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 lg:mb-0">
+                    <h4 class="text-lg font-bold mb-6">회사 정보</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">회사 소개</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">전문의 팀</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">채용 정보</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">협력 제안</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">언론보도</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">사회공헌</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 px-4">
+                    <h4 class="text-lg font-bold mb-6">고객지원</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">문의하기</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">배송 정보</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">반품 정책</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">응급처치 가이드</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">개인정보처리방침</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-wrap justify-between">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                        © 2023 닥터25 주식회사. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">이용약관</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">개인정보처리방침</a>
+                        <a href="#" class="text-gray-500 hover:text-gray-400 text-sm">사업자정보</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple accordion for FAQ
+        document.querySelectorAll('#faq button').forEach(button => {
+            button.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                const content = this.nextElementSibling;
+                
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    content.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
